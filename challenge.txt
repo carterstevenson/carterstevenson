@@ -1,0 +1,23 @@
+let x =0, y = 0, size = 40 , speed = 4;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(220);
+  
+  fill('red');
+  stroke('gold');
+  
+  square(x,y,size);
+  if(y == 0 && x <= width -size)
+    {
+      x+=speed;
+    }
+  if(y < height -size && x == width -size) y+=speed;
+  
+  if(x > 0 && y == height-size) x-=speed;
+  
+  if( x == 0 && y > 0) y-=speed;
+}
